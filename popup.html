@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <style>
+    body {
+      width: 240px;
+      padding: 14px 16px;
+      margin: 0;
+      font-family: "Microsoft YaHei","PingFang SC",sans-serif;
+      font-size: 13px;
+      color: #e0e0e0;
+      background: #1a1a1e;
+    }
+    h2 {
+      margin: 0 0 12px 0;
+      font-size: 14px;
+      font-weight: 600;
+      color: #eee;
+    }
+    .row {
+      display: flex;
+      align-items: center;
+      margin: 8px 0;
+    }
+    .row label {
+      min-width: 62px;
+      flex-shrink: 0;
+    }
+    .row input[type=range] {
+      flex: 1;
+      height: 4px;
+      cursor: pointer;
+      accent-color: #00a1d6;
+    }
+    .row .val {
+      min-width: 32px;
+      text-align: right;
+      color: #aaa;
+    }
+    .hint {
+      font-size: 11px;
+      color: #888;
+      margin: 8px 0 0 0;
+    }
+  </style>
+</head>
+<body>
+  <h2>折叠评论区</h2>
+  <div class="row">
+    <label>按钮位置</label>
+    <input type="range" id="btnPos" min="1" max="100">
+    <span class="val" id="btnPosVal">25%</span>
+  </div>
+  <div class="row">
+    <label>收起宽度</label>
+    <input type="range" id="playerWidth" min="50" max="100">
+    <span class="val" id="playerWidthVal">100%</span>
+  </div>
+  <p class="hint">收起宽度为 100% 时铺满，小于 100% 时居中</p>
+  <script src="config.js"></script>
+  <script src="popup.js"></script>
+</body>
+</html>

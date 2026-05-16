@@ -1,0 +1,22 @@
+{
+  "manifest_version": 3,
+  "name": "Bilibili 直播折叠评论区",
+  "version": "1.0",
+  "description": "为 Bilibili 直播添加评论区折叠按钮",
+  "permissions": ["storage"],
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "128": "icons/icon128.png"
+    }
+  },
+  "content_scripts": [{
+    "matches": ["https://live.bilibili.com/*"],
+    "js": ["config.js", "content.js"],
+    "css": ["content.css"],
+    "run_at": "document_end"
+  }],
+  "icons": {
+    "128": "icons/icon128.png"
+  }
+}
